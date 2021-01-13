@@ -10,12 +10,12 @@ namespace primtal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(primeNumer(6));
-            Console.WriteLine(primeNumer(5));
+            Console.WriteLine("how many prime numbers do you desire?");
+            Console.ReadLine();
+
         }
 
-        private static int primeNumer(int num) {
-            //make it test if it is a prime number or not
+        private static int testPrime(int num) { 
             int i;
             for (i = 2; i < num; i++) {
                 //test if it is dividable or not

@@ -17,10 +17,10 @@ namespace primtal
             int j = 2;
             Console.WriteLine("---"); // make it easier to see whre the prime numbers start
             while(i < primeCount) {
-                if (testPrime(j) == 0) {
+                if (!testPrime(j)) {
                     //do nothing
                 } else {
-                    Console.WriteLine($"{ j }");
+                    Console.Write($"{ j }, ");
                     i++;
                 }
                 j++;
@@ -28,18 +28,18 @@ namespace primtal
             
         }
 
-        private static int testPrime(int num) { 
+        private static bool testPrime(int num) { 
             int i;
             for (i = 2; i < num; i++) {
                 //test if it is dividable or not
                 if (num % i == 0) {
-                    return 0;
+                    return false;
                 }
             }
             if (i == num) {
-                return num;
+                return true;
             }
-            return 0;
+            return false;
         }
     }
 }

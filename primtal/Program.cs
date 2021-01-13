@@ -12,18 +12,20 @@ namespace primtal
         {
             Console.WriteLine("how many prime numbers do you desire?");
             int primeCount = Convert.ToInt32(Console.ReadLine());
-            int[] prime_numbers = new int[primeCount];
             //loop until you get desired amount prime numbers
             int i = 0;
-            Console.WriteLine(testPrime(primeCount));
-            /*
+            int j = 2;
+            Console.WriteLine("---"); // make it easier to see whre the prime numbers start
             while(i < primeCount) {
-                if (testPrime(i) == 1) {
-                    Console.WriteLine("punk ass bitch");
+                if (testPrime(j) == 0) {
+                    //do nothing
+                } else {
+                    Console.WriteLine($"{ j }");
                     i++;
                 }
+                j++;
             }
-            */
+            
         }
 
         private static int testPrime(int num) { 
@@ -35,7 +37,7 @@ namespace primtal
                 }
             }
             if (i == num) {
-                return 1;
+                return num;
             }
             return 0;
         }
